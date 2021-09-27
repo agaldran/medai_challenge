@@ -4,7 +4,6 @@ This repository contains all the necessary code to reproduce our results for the
 Double Encoder-Decoder Networks for Gastrointestinal Polyp Segmentation
 Adrian Galdran, Gustavo Carneiro, Miguel Ángel González Ballester
 ICPR Artificial Intelligence for Healthcare Applications Workshop (AIHA), 2021
-
 ```
 of which you will find a copy in this repo, within the `assets` folder. You can also watch me give some explanations on why our approach to this problem works pretty decently, the video is also in the `assets` folder. Have fun!
 
@@ -25,9 +24,8 @@ sh reproduce_training.sh
 
 I will try to upload my pretrained weights when time allows, but my poor internet connection (I am in the middle of a long trip) makes it complicated for now, please be patient.
 
-Once the models have been trained, you can also generate predicitions and uncertainty maps by running:
+Once the models have been trained, if you want to generate the predicitions and uncertainty maps you will first need to download test data from [this link](https://drive.google.com/drive/folders/1t8B45D2p3zEePHhUH5Qe-3iLs4EIrPJI), then uncompress it and place it inside the `data` folder. Once everything is in place, you just need to run:
 ```
 sh reproduce_test.sh
 ```
-But you will first need to download test data from [this link](https://drive.google.com/drive/folders/1t8B45D2p3zEePHhUH5Qe-3iLs4EIrPJI), then uncompress it and place it inside the `data` folder.
 
