@@ -1,18 +1,20 @@
 # MedAI: Transparency in Medical Image Segmentation Competition
 
 ![](https://raw.githubusercontent.com/agaldran/medai_challenge/main/assets/overall_fig.png?style=centerme)
-<p align="center">Schematic representation of the architecture we use for segmentation, see get_model.py for the implementation<p align="center">
+<p align="center">Schematic representation of the architecture we use for segmentation, see <em>get_model.py</em> for the implementation<p align="center">
 
-### Summary:
+## Summary:
 This repository contains all the necessary code to reproduce our results for the [MedAI](https://www.nora.ai/Competition/image-segmentation.html) competition on polyp and surgical instrument segmentation from endoscopic images. All the details of our model can be found in this paper:
 ```
 Double Encoder-Decoder Networks for Gastrointestinal Polyp Segmentation
 Adrian Galdran, Gustavo Carneiro, Miguel Ángel González Ballester
 ICPR Artificial Intelligence for Healthcare Applications Workshop (AIHA), 2021
 ```
-of which you will find a copy in this repo, within the `assets` folder. You can also watch me give some explanations on why our approach to this problem works pretty decently, the video is also in the `assets` folder. Have fun!
+of which you will find a copy in this repo, within the `assets` folder. 
+  
+You can also watch me (!!) give some explanations on why our approach to this problem works pretty decently, the video (sorry I look so tired these are hard days...) is also in the `assets` folder. Have fun segmenting - or watching me!
 
-### Reproducibility: 
+## Reproducibility: 
 Install the provided conda environment by running:
 ```
 conda create --name medai --file environment.txt
@@ -34,3 +36,4 @@ Once the models have been trained, if you want to generate the predicitions and 
 sh reproduce_test.sh
 ```
 
+Please feel free to open up an issue if you have any question, find something broken, or do not understand anything. 
