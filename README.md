@@ -1,3 +1,8 @@
+# MedAI: Transparency in Medical Image Segmentation Competition
+
+![](https://raw.githubusercontent.com/agaldran/medai_challenge/main/assets/overall_fig.png?style=centerme)
+<p align="center">Schematic representation of the architecture we use for segmentation, see get_model.py for the implementation<p align="center">
+
 ### Summary:
 This repository contains all the necessary code to reproduce our results for the [MedAI](https://www.nora.ai/Competition/image-segmentation.html) competition on polyp and surgical instrument segmentation from endoscopic images. All the details of our model can be found in this paper:
 ```
