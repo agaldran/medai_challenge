@@ -14,11 +14,14 @@ python train_sam_patience.py --cycle_lens 25/10 --model_name fpnet_resnext101_W 
 
 # GENERATE SEGMENTATIONS:#
 # you first need to download test data from https://drive.google.com/drive/folders/1t8B45D2p3zEePHhUH5Qe-3iLs4EIrPJI
-# then place it inside the data folder and run the following for 5-fold ensembling
-python generate_segs_ensemble5.py --load_checkpoint instruments/fpnet_resnext101_W_SAMADAM_F --save_path results/instruments/fpnet_resnext101_W_SAMADAM_ENS12345/
-python generate_segs_ensemble5.py --load_checkpoint polyps/fpnet_resnext101_W_SAMADAM_F --save_path results/polyps/fpnet_resnext101_W_SAMADAM_ENS12345/ \
---im_folder data/MedAI_2021_Polyp_Segmentation_Test_Dataset
-# or the following for 4-fold ensembling leaving the fifth model out
-python generate_segs_ensemble4.py --load_checkpoint instruments/fpnet_resnext101_W_SAMADAM_F --save_path results/instruments/fpnet_resnext101_W_SAMADAM_ENS1234/ --leave_out 5
-python generate_segs_ensemble4.py --load_checkpoint polyps/fpnet_resnext101_W_SAMADAM_F --save_path results/polyps/fpnet_resnext101_W_SAMADAM_ENS1234/ --leave_out 5 \
---im_folder data/MedAI_2021_Polyp_Segmentation_Test_Dataset
+# then place it inside the data folder and run the following to generate both images and uncertainty maps
+## polyps:
+#python generate_segs_with_uncertainty.py --save_path polyps/fpnet_resnext101_W_SAMADAM_ENS
+# instruments:
+#python generate_segs_with_uncertainty.py --im_folder data/MedAI_2021_Instrument_Segmentation_Test_Dataset --load_checkpoint instruments/fpnet_resnext101_W_SAMADAM_F --save_path instruments/fpnet_resnext101_W_SAMADAM_ENS
+
+# The following commands will generate segmentations that are overlayed on top of the test images:
+## polyps:
+#python generate_overlay_segs.py --save_path polyps/fpnet_resnext101_W_SAMADAM_ENS
+# instruments:
+#python generate_overlay_segs.py --im_folder data/MedAI_2021_Instrument_Segmentation_Test_Dataset --load_checkpoint instruments/fpnet_resnext101_W_SAMADAM_F --save_path instruments/fpnet_resnext101_W_SAMADAM_ENS
