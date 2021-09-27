@@ -10,7 +10,9 @@ Double Encoder-Decoder Networks for Gastrointestinal Polyp Segmentation
 Adrian Galdran, Gustavo Carneiro, Miguel Ángel González Ballester
 ICPR Artificial Intelligence for Healthcare Applications Workshop (AIHA), 2021
 ```
-of which you will find a copy in this repo, within the `assets` folder. You can also watch me give some explanations on why our approach to this problem works pretty decently, the video (sorry I look so tired! these are hard days...) is also in the `assets` folder. Have fun segmenting - or watching me!
+of which you will find a copy in this repo, within the `assets` folder. 
+  
+You can also watch me (!!) give some explanations on why our approach to this problem works pretty decently, the video (sorry I look so tired these are hard days...) is also in the `assets` folder. Have fun segmenting - or watching me!
 
 ## Reproducibility: 
 Install the provided conda environment by running:
